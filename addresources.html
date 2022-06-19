@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content = "width=device-width, initial-scale = 1.0">
+        <title>NLP Concepts | Emlyn Joseph</title>
+        <link rel="shortcut icon" href="Shortcut_iconJPG.JPG">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Oxygen:wght@700&display=swap" rel="stylesheet">
+
+       <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: whitesmoke;
+    /*
+    background-image: linear-gradient(to right, white, rgb(204, 202, 202), rgb(26, 25, 25));
+    */
+}
+.navbar {
+    background-color: rgb(2, 2, 66);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 1.55rem 0rem;
+    flex-wrap: wrap;
+}
+.navbar ul li {
+    font-family: Bebas Neue, serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.5s ease-in;
+}
+.navbar ul li a:hover {
+    color: rgb(0, 0, 88);
+    box-shadow: 0 0 0.7rem white;
+    background-color: white;
+}
+
+#name {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 3.125rem;
+    color: black;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+#title,
+#title2 {
+    color: black;
+    text-align: center;
+    margin-top: 2.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
+.info {
+    text-align: center;
+    margin: 1rem 2rem 1rem 2rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: rgb(88, 87, 87);
+}
+
+.links li,
+.ideas li {
+    text-align: center;
+    margin: 0 5rem 1rem 5rem;
+    list-style: none;
+}
+.links li a,
+.ideas li a {
+    color: rgb(0, 0, 188);
+}
+.ideas #firstidea {
+    margin-top: 1rem;
+}
+.links #lastlink,
+.ideas #lastidea {
+    margin-bottom: 2rem;
+}
+.links li a:hover,
+.ideas li a:hover {
+   text-decoration: none;
+   color: orangered;
+}
+
+#lasthr {
+    margin-bottom: 1.5rem;
+}
+
+@media only screen and (min-width: 1600px) {
+    .navbar ul li {
+        font-size: 3rem;
+    }
+    #name {
+        font-size: 4.3rem;
+    }
+    #title,
+    #title2 {
+        font-size: 3.1rem;
+    }
+    .info {
+        font-size: 1.8rem;
+    }
+    .links li,
+    .ideas li {
+        font-size: 2rem;
+    }
+
+}
+@media only screen and (max-width: 480px) {
+    .navbar ul {
+        justify-content: center;
+    }
+    .info {
+        font-size: 0.8rem;
+    }
+    .links li,
+    .ideas li {
+        font-size: 1rem;
+    }
+}
+
+        </style>
+    </head>
+    </body>
+        <header class="navbar">
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="nlp-lecture.html">NLP Concepts</a></li>
+                <li><a href="addresources.html">Additional Resources</a></li>
+            </ul>
+        </header>
+
+        <h1 id="name">Additional Resources</h1>
+
+        <section id="section1">
+            <hr />
+
+            <h2 id="title">Links</h2>
+            <h3 class="info">Here are some links you can use to learn more fundamentals about NLP, build NLP applications, and play around with applications that use NLP.</h3>
+            <ul class="links">
+                <li><a href="https://www.nltk.org/" target="_blank">Natural Language Toolkit</a> - An easy-to-use platform to build programs that work with language data. It has many interfaces for developers to use and you can learn about all of it using the documentation.</li>
+                <li><a href="https://transformer.huggingface.co/doc/distil-gpt2" target="_blank">Write With Transformer</a> - A modern neural network that allows you to write words and get suggestions to complete your sentences. This platform resembles modern NLP applications.</li>
+                <li><a href="https://www.cs.utexas.edu/~gdurrett/courses/nlp-module/" target="_blank">NLP Module</a> - Dr. Greg Durrett's NLP module where you can watch videos and view slides that will greatly increase your knowledge of NLP.</li>
+                <li><a href="https://beta.openai.com/examples">Open Ai Api</a> - This website shows a wide range of examples of common tasks that NLP applications can do.</li>
+                <li id="lastlink"><a href="https://huggingface.co/" target="_blank">Hugging Face</a> - A platform that provides open-source interfaces that use language processing. You can build NLP applications using this platform.</li>
+            </ul>
+
+            <hr />
+
+            <h2 id="title2">Ideas for Projects</h2>
+            <ul class="ideas">
+                <li id="firstidea"><b>Build a simple sentence completer app</b> that uses the previous words in order to suggest the next word. The second link on the first section of this page above is a great example of a sentence completer app. However, that app is very complicated to make, so your app can be much more simple. You can use probabilities to suggest the next word based on the sentence starters. You can use this <a href="https://www.geeksforgeeks.org/autocomplete-input-suggestion-using-python-and-flask/" target="_blank">resource</a> to get started.</li>
+                <li id="lastidea"><b>Build a sentiment analysis app.</b> Sentiment analysis is identifying the tone or emotions of any text. You can use this <a href="https://www.datacamp.com/tutorial/simplifying-sentiment-analysis-python" target="_blank">resource</a> to get started.</li>
+            </ul>
+
+            <hr id="lasthr"/>
+        </section>
+    </body>
+</html>
