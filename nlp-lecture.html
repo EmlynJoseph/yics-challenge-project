@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content = "width=device-width, initial-scale = 1.0">
+        <title>NLP Concepts | Emlyn Joseph</title>
+        <link rel="shortcut icon" href="images/Shortcut_iconJPG.JPG">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Oxygen:wght@700&display=swap" rel="stylesheet">
+
+       <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: whitesmoke;
+    /*
+    background-image: linear-gradient(to right, white, rgb(204, 202, 202), rgb(26, 25, 25));
+    */
+}
+.navbar {
+    background-color: rgb(2, 2, 66);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 1.55rem 0rem;
+    flex-wrap: wrap;
+}
+.navbar ul li {
+    font-family: Bebas Neue, serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.5s ease-in;
+}
+.navbar ul li a:hover {
+    color: rgb(0, 0, 88);
+    box-shadow: 0 0 0.7rem white;
+    background-color: white;
+}
+
+#name {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 3.125rem;
+    color: black;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+#title,
+#title2 {
+    color: black;
+    text-align: center;
+    margin-top: 2.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+.overview p,
+.examples p {
+    margin: 3rem 5rem 4rem 5rem;
+    text-align: center;
+}
+.examples #codesnippet {
+    font-family: "Courier New", "Courier", monospace, sans-serif;
+    font-weight: 580;
+}
+.examples p a:hover,
+.info a:hover {
+    color: orangered;
+    text-decoration: none;
+}
+
+#languagemodel,
+#ngrams {
+    width: 25rem;
+}
+
+.info {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: rgb(88, 87, 87);
+}
+#instructions {
+    color: rgb(0, 0, 88);
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 2rem 2rem;
+}
+
+@media only screen and (min-width: 1600px) {
+    .navbar ul li {
+        font-size: 3rem;
+    }
+    #name {
+        font-size: 4.3rem;
+    }
+    #title,
+    #title2 {
+        font-size: 3.1rem;
+    }
+    .overview p,
+    .examples p {
+        font-size: 2rem;
+    }
+    #languagemodel,
+    #ngrams {
+        width: 55rem;
+    }
+    .info {
+        font-size: 1.8rem;
+    }
+    #instructions {
+        font-size: 2.7rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .navbar ul {
+        justify-content: center;
+    }
+    .overview p,
+    .examples p {
+        font-size: 0.9rem;
+        overflow: scroll;
+        margin: 4rem 1rem;
+    }
+    #languagemodel,
+    #ngrams {
+        max-width: 18rem;
+    }
+    #instructions {
+        font-size: 1.1rem;
+    }
+}
+
+        </style>
+    </head>
+    </body>
+        <header class="navbar">
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="nlp-lecture.html">NLP Concepts</a></li>
+                <li><a href="addresources.html">Additional Resources</a></li>
+            </ul>
+        </header>
+
+        <h1 id="name">NLP (Natural Language Processing) Concepts</h1>
+
+        <section id="section1">
+            <hr />
+
+            <h2 id="title">Overview</h2>
+            <div class="overview">
+                <p>NLP (Natural Language Processing) is a growing subfield in Computer Science. In simple terms, NLP is the interaction between humans and AI (Artificial Intelligence) where human languages are processed and analyzed by computers. People all around the world use many NLP applications in their daily life. For example, Siri, Alexa, Google Translate, Grammarly, etc. are all built using NLP. It is very difficult to program computers to understand human languages and process them. Since people ask Siri millions of different questions, developers have to program Siri accordingly and constantly add new data and regularly fix new bugs in order to satisfy the users.</p>
+            </div>
+
+            <hr />
+
+            <h2 id="title2">Examples</h2>
+            <div class="examples">
+                <p id="codesnippet">
+                    int numberOfGoodWords = computeNumGoodWords(review);
+                    <br>int numberOfBadWords = computeNumBadWords(review);
+                    <br>if (numberOfGoodWords > 3 && numberOfBadWords < 2)
+                    <br>return “4 stars”;
+                    <br>else if (numberOfGoodWords > 2 && numberOfBadWords < 3)
+                    <br>return “3 stars”;
+                    <br>else [...]
+                </p>
+                <p>The code snippet above is a simple example of an NLP application that can analyze text to find the positive and negative words in order to suggest a rating. This snippet is known as a decision tree. It uses conditionals (if and else statements) in order to suggest a specific rating. </p>
+
+                <center><img src="images/Language_modelJPG.JPG" id="languagemodel"></center>
+                <p>The image above illustrates a simple language model. A language model shows the probabilities of the next words using the previous words. The image only shows one small example of a language model that predicts the next words after 'I want to'. Language models are very complicated as there can be millions of possibilities for words and that the models adapt depending on the frequency of the user's choice. There are many types of language models and you can check out this <a href="https://insights.daffodilsw.com/blog/what-are-language-models-in-nlp" target="_blank">resource</a> to learn more.</p>
+
+                <center><img src="images/N-grams.png" id="ngrams"></center>
+                <p>N-grams are basically a sequence of n items from a given text. There are different types of n-gram language models, including unigrams, bigrams, trigrams, etc. The image above shows if each word is analyzed separately or together, which depends on the gram. In order to program language models, high-level math is required in order to calculate probabilities of vast amounts of data. </p>
+            </div>
+
+
+            <hr id="lasthr"/>
+        </section>
+
+        <h3 class="info">The code snippet and images above were from <a style="color: blue;"href="https://www.cs.utexas.edu/~gdurrett/courses/nlp-module/nlp-module-slides.pdf" target="_blank">Dr. Durrett's presentation.</a></h3>
+        <h3 id="instructions">Check out the additional resources page to learn more about NLP and practice using/building NLP applications.</h3>
+    </body>
+</html>
